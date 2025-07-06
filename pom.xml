@@ -11,9 +11,28 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+
+		<struts2.version>2.5.14.1</struts2.version>
+		<log4j2.version>2.10.0</log4j2.version>
 	</properties>
 
 	<dependencies>
+		<!-- Struts 2 -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -37,7 +56,7 @@
 					<stopPort>8999</stopPort>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<scanTargets>
-<!--						<scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>-->
+						<scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
 					</scanTargets>
 				</configuration>
 			</plugin>
